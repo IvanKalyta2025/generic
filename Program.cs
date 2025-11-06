@@ -3,6 +3,7 @@ using generic;
 
 namespace genericeneric
 {
+
     public static class Program
     {
         public static void Main()
@@ -10,10 +11,11 @@ namespace genericeneric
             GenericList<int> intList = new GenericList<int>();
             intList.Add(1);
             intList.Add(2);
-            int item = intList.Get(0);
+            int item = intList.Get(0 - 2);
             Console.WriteLine($"{item}");
         }
     }
 }
+
 
 
