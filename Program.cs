@@ -8,12 +8,17 @@ namespace genericeneric
     {
         public static void Main()
         {
-            GenericList<int> intList = new GenericList<int>();
+            var intList = new GenericList<int>();
             intList.Add(1);
             intList.Add(2);
-            int item = intList.Get(0 - 2);
-            Console.WriteLine($"{item}");
+
+            string item = string.Join(" ",
+                Enumerable.Range(0, intList.Count)
+                .Select(intList.Get));
+
+            Console.WriteLine(item);
         }
+
     }
 }
 
